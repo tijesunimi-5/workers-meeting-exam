@@ -7,15 +7,86 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.hero {
+  width: 500px;
+  height: 300px;
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+}
+.overlay {
+  width: 375px;
+  height: 300px;
+  position: absolute;
+  margin-top: 30px;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4)
+}
+.qes-input{
+  width: 325px;
+  margin-left: 20px;
+  border-radius: 5px;
+  margin-top: 3px;
+  padding-left: 4px;
+}
+
+@media (min-width: 430px) {
+  .overlay {
+    width: 430px;
+  }
+  .big-form-div {
+    height: 0vh;
+  }
+  .sec-form-div {
+    margin-left: 50px;
+  }
+}
+
+@media (min-width: 390px) {
+  .overlay {
+    width: 390px;
+  }
+  .question-div {
+    margin-left: 8px;
+  }
+}
+@media (min-width: 414px) {
+  .overlay {
+    width: 414px;
+  }
+  .sec-form-div {
+    margin-left: 45px;
+  }
+  .overall {
+    margin-left: 28px;
+    margin-top: 60px;
+  }
+  .submit {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 375px) {
+  .sec-form-div {
+    margin-left: 25px;
+  }
+  .big-form-div {
+    height: 30vh;
+  }
+  .button {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .qes-input {
+    width: 500px;
+  }
+  .submit {
+    margin-left: -130px;
+  }
+} 
