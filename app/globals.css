@@ -55,10 +55,22 @@ body {
   .question-div {
     margin-left: 8px;
   }
+  .big-form-div {
+    margin-left: 5px;
+  }
+  .question-sec {
+    margin-left: 15px;
+  }
 }
 @media (min-width: 414px) {
   .overlay {
     width: 414px;
+  }
+  .big-form-div {
+    margin-left: 20px;
+  }
+  .question-sec {
+    margin-left: 25px;
   }
   .sec-form-div {
     margin-left: 45px;

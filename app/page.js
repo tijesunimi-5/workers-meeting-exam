@@ -192,7 +192,7 @@ export default function Home() {
       </div>
 
       {/**Question section-------> */}
-      <div className="mt-3 md:mt-6 ml-2">
+      <div className="question-sec mt-3 md:mt-6 md:ml-10 ml-2">
         {/**This is going to display the questions from the questionsData */}
         {questions.map((question) => (
           <div className="mt-3 md:mt-6" key={question.id}>
