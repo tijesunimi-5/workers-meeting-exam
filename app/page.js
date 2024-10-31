@@ -46,7 +46,7 @@ export default function Home() {
       !userData.courseName
     ) {
       //then this prompts the user to know their error
-      setSubmitError(<p className="text-red-500 text-xl font-bold">Fill in your details...</p>);
+      setSubmitError(<p className="text-red-500 text-xl font-bold mb-10">Fill in your details...</p>);
 
       //this clears out the error message after 3secs
       setTimeout(() => {
@@ -69,7 +69,7 @@ export default function Home() {
         if (result.success) {
           console.log("Data submitted successfully:", result);
           setSubmitError(
-            <p className="text-2xl font-bold text-green-500">
+            <p className="text-2xl font-bold text-green-500 mb-10">
               Your answers has been submitted....
             </p>
           );
