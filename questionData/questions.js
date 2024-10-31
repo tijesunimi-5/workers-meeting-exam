@@ -182,11 +182,6 @@ const questions = [
     question: "29. What does holy communion signify?",
     isTextArea: true,
   },
-  {
-    id: "question ",
-    question: "",
-    isTextArea: true,
-  },
 ];
 
 
