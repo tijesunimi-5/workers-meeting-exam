@@ -44,7 +44,7 @@ export default function AdminPage() {
       <div className="ml-2">
         <div className="flex flex-col gap-5">
           {submissions.map((submissions, index) => (
-            <Card>
+            <Card key={index}>
               <div key={index} className="ml-2">
                 <h2 className="font-semibold">
                   Fullname: {submissions.userData.fullName}
