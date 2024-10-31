@@ -16,8 +16,9 @@ export async function GET() {
     });
   } catch (error) {
     console.error(error);
+    // Corrected from Json.stringify to JSON.stringify
     return new Response(
-      Json.stringify({ success: false, error: error.message }),
+      JSON.stringify({ success: false, error: error.message }), // Fixed the capitalization
       {
         status: 500,
       }
