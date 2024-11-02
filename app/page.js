@@ -98,20 +98,20 @@ export default function Home() {
   return (
     <div>
       {/**Hero section */}
-      <div className="relative xl:w-[1510px] overflow-x-hidden">
-        <div className="relative top-[-80px] md:w-[768px] lg:w-[1024px] xl:w-[1518px]">
+      <div className="hero-div relative xl:w-[1510px] xl:h-[550px] md:h-[400px] overflow-hidden">
+        <div className="relative top-[-80px] md:w-[768px]  lg:w-[1024px] xl:w-[1650px]">
           <img
             src="/heroImage.jpg"
-            className="hero md:w-[768px] lg:w-[1024px] xl:w-[1600px] xl:h-[500px]"
+            className="hero md:w-[768px] md:h-[500px] lg:w-[1024px] xl:w-[1650px] xl:h-[600px]"
             alt="Hero"
           />
-          <div className="overlay md:w-[768px] lg:w-[1024px] xl:w-[1600px] xl:h-[500px]"></div>
+          <div className="overlay md:w-[768px] md:h-[500px] lg:w-[1024px] xl:w-[1600px] xl:h-[600px]"></div>
         </div>
-        <div className="relative z-20 ml-3 my-5 text-white">
-          <h1 className="uppercase  pt-10 font-bold md:text-center xl:text-7xl">
+        <div className="relative z-20 ml-3 my-5 text-white md:mt-24">
+          <h1 className="uppercase  pt-10 font-bold md:text-center xl:text-7xl md:text-3xl">
             Welcome To Your Exam
           </h1>
-          <p className="text-start px-2 xl:px-32 xl:mt-20 xl:text-center xl:text-3xl">
+          <p className="text-start px-2 md:text-2xl xl:px-32 xl:mt-20 xl:text-center xl:text-3xl">
             Please read your answers through before clicking the submit button.
             You can only submit the exam once. Any other submissions will be
             disregarded. <br />
@@ -122,7 +122,7 @@ export default function Home() {
       </div>
 
       {/**Form section */}
-      <div className="big-form-div mt-24 mb-56 md:mb-0 md:mt-36 xl:mt-56 xl:pl-48">
+      <div className="big-form-div mt-24 mb-56 md:mb-0 md:mt-16 xl:mt-24 xl:pl-48">
         <div className="sec-form-div bg-gray-200 w-[330px] ml-8 pl-4 rounded-lg shadow-xl py-2 md:w-[600px] md:ml-20 lg:ml-48">
           <h1 className="font-bold text-2xl md:ml-40 ml-7">
             Fill in correct details
@@ -192,48 +192,49 @@ export default function Home() {
       </div>
 
       {/**Question section-------> */}
-      <div className="question-sec mt-3 md:mt-6 md:ml-10 ml-2">
+      <div className="question-sec mt-3 md:mt-6 md:ml-10 ml-2 ">
+        <h1 className="text-3xl font-bold text-center">Question</h1>
         {/**This is going to display the questions from the questionsData */}
-        {questions.map((question) => (
-          <div className="mt-3 md:mt-6" key={question.id}>
-            <Card key={question.id}>
-              <h1 className="font-bold text-xl pl-2">{question.question}</h1>
-              {question.isTextArea ? (
-                <textarea
-                  className="qes-input h-16 pb-3"
-                  onChange={(e) =>
-                    handleInputChange(
-                      question.id,
-                      question.question,
-                      e.target.value
-                    )
-                  }
-                ></textarea>
-              ) : (
-                <input
-                  type="text"
-                  className="qes-input"
-                  onChange={(e) =>
-                    handleInputChange(
-                      question.id,
-                      question.question,
-                      e.target.value
-                    )
-                  }
-                />
-              )}
-            </Card>
-          </div>
-        ))}
-
-        <button
-          onClick={submitAll}
-          className="button text-2xl border-2 px-6 py-1 rounded-md font-bold text-black bg-gray-200 border-white shadow-lg inset-2 xl:px-12 xl:ml-[-350px] my-7 ml-10"
-        >
-          Submit
-        </button>
-
-        {submitError}
+        <div className="xl:ml-[350px]">
+          {questions.map((question) => (
+            <div className="mt-3 md:mt-6" key={question.id}>
+              <Card key={question.id}>
+                <h1 className="font-bold text-xl pl-2">{question.question}</h1>
+                {question.isTextArea ? (
+                  <textarea
+                    className="qes-input h-16 pb-3"
+                    onChange={(e) =>
+                      handleInputChange(
+                        question.id,
+                        question.question,
+                        e.target.value
+                      )
+                    }
+                  ></textarea>
+                ) : (
+                  <input
+                    type="text"
+                    className="qes-input"
+                    onChange={(e) =>
+                      handleInputChange(
+                        question.id,
+                        question.question,
+                        e.target.value
+                      )
+                    }
+                  />
+                )}
+              </Card>
+            </div>
+          ))}
+          <button
+            onClick={submitAll}
+            className="button text-2xl border-2 px-6 py-1 rounded-md font-bold text-black bg-gray-200 border-white shadow-lg inset-2 xl:px-12 xl:ml-[200px] xl:mt-5 mt-7 ml-10"
+          >
+            Submit
+          </button>
+          {submitError}
+        </div>
       </div>
     </div>
   );

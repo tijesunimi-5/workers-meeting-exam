@@ -38,13 +38,21 @@ body {
 
 @media (min-width: 430px) {
   .overlay {
-    width: 430px;
+    width: 500px;
+  }
+  .hero-div {
+    height: 300px;
   }
   .big-form-div {
     height: 0vh;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .sec-form-div {
     margin-left: 50px;
+  }
+  .question-sec {
+    margin-top: 100px;
   }
 }
 
@@ -102,3 +110,8 @@ body {
     margin-left: -130px;
   }
 } 
+@media (min-width: 830px) {
+  .hero{
+    width: 830px;
+  }
+}
