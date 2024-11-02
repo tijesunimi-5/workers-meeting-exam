@@ -148,7 +148,7 @@ const questions = [
   {
     id: "question 23",
     question:
-      "23. What is the theme of the Church for the year 2012. Which verse in the book of Psalm is it taken from?",
+      "23. What is the theme of the Church for the year 2023. Which verse in the book of Psalm is it taken from?",
     isTextArea: false,
   },
   {
